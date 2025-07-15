@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "accepted_in_reference": {
+      "equals": 0
+    },
+    "is_cryptographic_proof": {
+      "equals": false
+    },
+    "rejected": {
+      "equals": 36
+    },
+    "replays_rejected": {
+      "equals": true
+    },
+    "requests": {
+      "equals": 36
+    }
+  },
+  "rationale": "Reject inconsistent hidden-field commitment.",
+  "synthetic": true
+}
