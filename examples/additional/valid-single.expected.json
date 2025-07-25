@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "accepted_in_reference": {
+      "equals": 1
+    },
+    "is_cryptographic_proof": {
+      "equals": false
+    },
+    "rejected": {
+      "equals": 0
+    },
+    "replays_rejected": {
+      "equals": true
+    },
+    "requests": {
+      "equals": 1
+    }
+  },
+  "rationale": "The adult credential has a valid issuer and expiry.",
+  "synthetic": true
+}
