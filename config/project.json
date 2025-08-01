@@ -1,0 +1,47 @@
+{
+  "algorithm": "Circuit constrains 32-bit epoch-day fields, a Poseidon credential commitment, EdDSA issuer authentication, dob <= cutoff and now <= expiry. Public challenge binds a nullifier to audience and nonce. References: https://github.com/iden3/circomlib and https://github.com/iden3/snarkjs .",
+  "architecture": "Default: mock issuer \u2192 plaintext policy checks \u2192 replay ledger. Optional: issuer EdDSA \u2192 private witness \u2192 Circom R1CS/WASM \u2192 Groth16 \u2192 verifier policy binding \u2192 nonce consumption.",
+  "data_model": "Circuit private inputs: DOB, expiry, salt, commitment and signature. Public signals in order: nullifier output, issuerAx, issuerAy, cutoff, now, nonce, audience. No name is required.",
+  "description": "A credential policy reference plus an actual Circom age/expiry/signature circuit and optional Groth16 issuer/prover/verifier scripts.",
+  "design": "The verifier must choose and trust public keys, cutoff, now, audience and challenge rather than trusting prover-selected values. Dates are epoch days computed outside the circuit; the issuer validates real dates. Setup toxic waste and witness files require secure handling.",
+  "families": [
+    "valid",
+    "underage",
+    "bad-commitment",
+    "wrong-issuer",
+    "expired",
+    "replayed"
+  ],
+  "family_notes": [
+    "Accept a trusted credential that meets cutoff and expiry policy.",
+    "Reject a birthdate later than the verifier cutoff.",
+    "Reject inconsistent hidden-field commitment.",
+    "Reject a credential from an untrusted issuer.",
+    "Reject an expired credential.",
+    "Reject reuse of an already consumed challenge."
+  ],
+  "file_count": 165,
+  "limitations": "Default Python execution is NOT a ZK proof and reveals private fields to its evaluator. SHA-256/HMAC mocks are distinct from the Poseidon/EdDSA circuit and are not interoperable. Circom, circomlib and snarkjs execution/trusted setup were unavailable here; circuit and proof paths are unvalidated sources. No DID registry, revocation tree, Rust implementation or audited cryptographic protocol. A nonce ledger needs transactional storage and challenge expiry in a real service.",
+  "numpy": false,
+  "operations": "Use synthetic credentials. Install optional JS dependencies only to develop the circuit path. Supply a reviewed Powers of Tau and circuit-specific final zkey; no ceremony artifacts or private issuer keys are bundled.",
+  "scope": "Default plaintext policy evaluator with HMAC mock credentials and replay ledger. Optional Circom circuit binds private DOB/expiry/salt to an issuer EdDSA-Poseidon signature, date cutoff and fresh audience/nonce. Node scripts issue witnesses, generate Groth16 proofs and verify trusted public signals.",
+  "security": "The mock key is public demo material. Never use it with real credentials. The generated cryptographic path is unaudited and unexecuted; protect witnesses, use a reviewed setup and trusted verifier policy before experimentation.",
+  "sizes": [
+    6,
+    12,
+    18,
+    24,
+    30,
+    36
+  ],
+  "slug": "zkp-identity-protocol",
+  "title": "Zero-Knowledge Decentralized Identity Protocol",
+  "topics": [
+    "zero-knowledge",
+    "circom",
+    "snarkjs",
+    "identity",
+    "cryptography"
+  ],
+  "workload_count": 36
+}
