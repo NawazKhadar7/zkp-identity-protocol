@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "accepted_in_reference": {
+      "equals": 0
+    },
+    "is_cryptographic_proof": {
+      "equals": false
+    },
+    "rejected": {
+      "equals": 1
+    },
+    "replays_rejected": {
+      "equals": true
+    },
+    "requests": {
+      "equals": 1
+    }
+  },
+  "rationale": "The age cutoff rejects the request.",
+  "synthetic": true
+}
