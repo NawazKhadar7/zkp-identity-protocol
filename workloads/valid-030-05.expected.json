@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "accepted_in_reference": {
+      "equals": 30
+    },
+    "is_cryptographic_proof": {
+      "equals": false
+    },
+    "rejected": {
+      "equals": 0
+    },
+    "replays_rejected": {
+      "equals": true
+    },
+    "requests": {
+      "equals": 30
+    }
+  },
+  "rationale": "Accept a trusted credential that meets cutoff and expiry policy.",
+  "synthetic": true
+}
