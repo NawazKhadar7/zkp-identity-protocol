@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "accepted_in_reference": {
+      "equals": 0
+    },
+    "is_cryptographic_proof": {
+      "equals": false
+    },
+    "rejected": {
+      "equals": 30
+    },
+    "replays_rejected": {
+      "equals": true
+    },
+    "requests": {
+      "equals": 30
+    }
+  },
+  "rationale": "Reject reuse of an already consumed challenge.",
+  "synthetic": true
+}
