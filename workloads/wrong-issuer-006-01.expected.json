@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "accepted_in_reference": {
+      "equals": 0
+    },
+    "is_cryptographic_proof": {
+      "equals": false
+    },
+    "rejected": {
+      "equals": 6
+    },
+    "replays_rejected": {
+      "equals": true
+    },
+    "requests": {
+      "equals": 6
+    }
+  },
+  "rationale": "Reject a credential from an untrusted issuer.",
+  "synthetic": true
+}
