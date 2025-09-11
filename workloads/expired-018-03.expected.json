@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "accepted_in_reference": {
+      "equals": 0
+    },
+    "is_cryptographic_proof": {
+      "equals": false
+    },
+    "rejected": {
+      "equals": 18
+    },
+    "replays_rejected": {
+      "equals": true
+    },
+    "requests": {
+      "equals": 18
+    }
+  },
+  "rationale": "Reject an expired credential.",
+  "synthetic": true
+}
