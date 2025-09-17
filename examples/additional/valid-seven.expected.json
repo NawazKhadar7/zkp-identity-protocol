@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "accepted_in_reference": {
+      "equals": 7
+    },
+    "is_cryptographic_proof": {
+      "equals": false
+    },
+    "rejected": {
+      "equals": 0
+    },
+    "replays_rejected": {
+      "equals": true
+    },
+    "requests": {
+      "equals": 7
+    }
+  },
+  "rationale": "The ledger must not reject distinct valid requests.",
+  "synthetic": true
+}
