@@ -1,0 +1,20 @@
+{
+  "metrics": {
+    "accepted_in_reference": 6,
+    "is_cryptographic_proof": false,
+    "rejected": 0,
+    "replays_rejected": true,
+    "requests": 6
+  },
+  "output": {
+    "mode": "plaintext policy evaluation; not zero-knowledge",
+    "reasons": [
+      "policy-satisfied",
+      "policy-satisfied",
+      "policy-satisfied",
+      "policy-satisfied",
+      "policy-satisfied",
+      "policy-satisfied"
+    ]
+  }
+}
