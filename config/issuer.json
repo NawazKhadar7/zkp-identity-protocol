@@ -1,0 +1,14 @@
+{
+  "epoch": "1970-01-01",
+  "issuer": "demo-issuer",
+  "production_key_included": false,
+  "reference_only": true,
+  "trusted_policy_public_fields": [
+    "issuerAx",
+    "issuerAy",
+    "cutoff",
+    "now",
+    "nonce",
+    "audience"
+  ]
+}
