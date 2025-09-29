@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "accepted_in_reference": {
+      "equals": 0
+    },
+    "is_cryptographic_proof": {
+      "equals": false
+    },
+    "rejected": {
+      "equals": 12
+    },
+    "replays_rejected": {
+      "equals": true
+    },
+    "requests": {
+      "equals": 12
+    }
+  },
+  "rationale": "Reject a birthdate later than the verifier cutoff.",
+  "synthetic": true
+}
